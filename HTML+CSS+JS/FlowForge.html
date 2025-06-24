@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FlowForge – Dev Task Visualizer</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js CDN -->
+</head>
+<body>
+  <h1>🛠 FlowForge – Dev Workflow Analyzer</h1>
+
+  <div class="board">
+    <div class="column" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <h2>📝 To Do</h2>
+    </div>
+    <div class="column" id="inprogress" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <h2>🚧 In Progress</h2>
+    </div>
+    <div class="column" id="testing" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <h2>🧪 Testing</h2>
+    </div>
+    <div class="column" id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <h2>✅ Done</h2>
+    </div>
+  </div>
+
+  <div class="controls">
+    <input type="text" id="taskInput" placeholder="Enter new task" />
+    <button onclick="addTask()">Add Task</button>
+    <button onclick="analyzeFlow()">Analyze Efficiency</button>
+    <button onclick="exportCSV()">⬇ Export CSV</button>
+    <select id="filterDate" onchange="filterByDate()">
+      <option value="">🔍 Filter by Date</option>
+    </select>
+  </div>
+
+  <div id="analysisBox">
+    <h3>🔍 Efficiency Report</h3>
+    <p id="efficiencyReport">No analysis yet.</p>
+  </div>
+
+  <canvas id="efficiencyChart" width="600" height="300"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>

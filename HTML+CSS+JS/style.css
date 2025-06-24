@@ -1,0 +1,77 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #2c3e50;
+}
+
+.board {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.column {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 200px;
+  min-height: 300px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.column h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.task {
+  background: #e3f2fd;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 5px;
+  cursor: grab;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+input {
+  padding: 8px;
+  width: 200px;
+}
+
+button {
+  padding: 8px 14px;
+  margin-left: 10px;
+  background: #0078d7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+select {
+  padding: 8px;
+  margin-left: 10px;
+}
+
+#analysisBox {
+  margin-top: 30px;
+  text-align: left;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fefefe;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
